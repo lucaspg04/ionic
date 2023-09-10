@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'detalle-viaje',
     loadChildren: () => import('./pages/detalle-viaje/detalle-viaje.module').then( m => m.DetalleViajePageModule)
   },
+  {
+    path: 'viaje-conductor',
+    loadChildren: () => import('./pages/viaje-conductor/viaje-conductor.module').then( m => m.ViajeConductorPageModule)
+  },
 
 ];
 

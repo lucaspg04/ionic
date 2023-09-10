@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Establecer Ruta como Conductor
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Punto de partida -->
+    <ion-item>
+      <ion-label position="floating">Partida</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Destino</ion-label>
+      <ion-input type="text" [(ngModel)]="destino" (input)="Mostrarimagen()">
+      </ion-input>
+    </ion-item>
+
+    <ng-container *ngIf="destino && mostrarimagen">
+      <img src="assets/img/maps.png" alt="Imagen de Ubicación">
+    </ng-container>
+  
+
+    <!-- Pasajeros -->
+    <ion-item>
+      <ion-label position="floating">Número de Pasajeros</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+
+    <!-- Valor -->
+    <ion-item>
+      <ion-label position="floating">Valor por pasajero</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <!-- Boton confirmar -->
+
+  <ion-button expand="full">Confirmar</ion-button>
+</ion-content>
