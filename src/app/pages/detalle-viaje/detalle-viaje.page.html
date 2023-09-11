@@ -1,7 +1,6 @@
 <app-encabezado titulo="Detalle del viaje"></app-encabezado>
 
 <ion-content>
-  <!-- Información del Viaje -->
   <ion-card>
     <ion-card-header>
       <ion-card-title>Destino</ion-card-title>
@@ -20,6 +19,6 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-button expand="full">Confirmar</ion-button>
+  <ion-button expand="full" (click)="onClick('pago')">Confirmar</ion-button>
 </ion-content>
 
