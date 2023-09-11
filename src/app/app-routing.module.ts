@@ -10,7 +10,8 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'perfil',
     loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
@@ -22,6 +23,18 @@ const routes: Routes = [
     path: 'viaje-conductor',
     loadChildren: () => import('./pages/viaje-conductor/viaje-conductor.module').then( m => m.ViajeConductorPageModule)
   },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
+  },  {
+    path: 'solicitar-viaje',
+    loadChildren: () => import('./pages/solicitar-viaje/solicitar-viaje.module').then( m => m.SolicitarViajePageModule)
+  },
+  {
+    path: 'registrarse',
+    loadChildren: () => import('./pages/registrarse/registrarse.module').then( m => m.RegistrarsePageModule)
+  },
+
 
 ];
 

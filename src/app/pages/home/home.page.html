@@ -1,20 +1,32 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-avatar slot="end">
+    <img src="../../assets/img/te_llevo.png" />
+    </ion-avatar>
+    <ion-title> Te llevo App </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content class="ion-padding">
+
+  <h3>Iniciar Sesión</h3>
+  <form  [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+    <ion-item>
+      <ion-input [value]="valorUser" (ionInput)="validarUser($event)" formControlname="user" labelPlacement="floating" label="User"  type="user" aria-label="Email" ></ion-input>
+    </ion-item>
+    <ion-item>
+    
+      <ion-input [value]="valorPassword" (ionInput)="validarPassword($event)" id="password" formControlname="password" labelPlacement="floating" label="Password"  type="password" aria-label="password"></ion-input>
+    </ion-item>
+  <!--  <ion-button block color="primary" type="submit" [disabled]="loginForm.invalid">
+      Login
+    </ion-button> -->
+    <ion-button (click)="onSubmit()" expand="full" color="primary" type="submit" class="ion-padding" [disabled]="deshabilitado" >
+      Entrar
+    </ion-button>
+  </form>
+  <p style="text-align: center;">
+    ¿No tienes una cuenta? <a (click)="navegarARegistro()">Registrarse</a>
+  </p>
 </ion-content>
