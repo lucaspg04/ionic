@@ -42,6 +42,10 @@ const routes: Routes = [
     path: 'pago-realizado',
     loadChildren: () => import('./pages/pago-realizado/pago-realizado.module').then( m => m.PagoRealizadoPageModule)
   },
+  {
+    path: 'historial',
+    loadChildren: () => import('./pages/historial/historial.module').then( m => m.HistorialPageModule)
+  },
 
 
 ];
