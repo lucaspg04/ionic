@@ -67,6 +67,10 @@ export class HomePage implements OnInit {
     this.router.navigate(['/registrarse']); // Reemplaza 'registro' con la ruta real de tu página de registro
   }
 
+  navegarARecuperar() {
+    this.router.navigate(['/recuperar-contrasenia']); 
+  }
+
   onSubmit() {
     if (this.loginForm.valid) {
       // Ambos campos son válidos, puedes redirigir a la página perfil

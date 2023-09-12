@@ -34,6 +34,10 @@ const routes: Routes = [
     path: 'registrarse',
     loadChildren: () => import('./pages/registrarse/registrarse.module').then( m => m.RegistrarsePageModule)
   },
+  {
+    path: 'recuperar-contrasenia',
+    loadChildren: () => import('./pages/recuperar-contrasenia/recuperar-contrasenia.module').then( m => m.RecuperarContraseniaPageModule)
+  },
 
 
 ];
