@@ -2,18 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-perfil',
-  templateUrl: './perfil.page.html',
-  styleUrls: ['./perfil.page.scss'],
+  selector: 'app-pago',
+  templateUrl: './pago.page.html',
+  styleUrls: ['./pago.page.scss'],
 })
-export class PerfilPage implements OnInit {
+export class PagoPage implements OnInit {
 
   constructor(private router:Router) { }
 
   ngOnInit() {
   }
 
-  onClick(ruta:string){
+  onClick(ruta:string)
+  {
     this.router.navigate(['/'+ruta])
   }
 

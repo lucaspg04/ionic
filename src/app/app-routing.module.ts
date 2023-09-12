@@ -26,7 +26,8 @@ const routes: Routes = [
   {
     path: 'inicio',
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
-  },  {
+  },
+  {
     path: 'solicitar-viaje',
     loadChildren: () => import('./pages/solicitar-viaje/solicitar-viaje.module').then( m => m.SolicitarViajePageModule)
   },
@@ -37,6 +38,18 @@ const routes: Routes = [
   {
     path: 'recuperar-contrasenia',
     loadChildren: () => import('./pages/recuperar-contrasenia/recuperar-contrasenia.module').then( m => m.RecuperarContraseniaPageModule)
+  },
+  {
+    path: 'pago',
+    loadChildren: () => import('./pages/pago/pago.module').then( m => m.PagoPageModule)
+  },
+  {
+    path: 'pago-realizado',
+    loadChildren: () => import('./pages/pago-realizado/pago-realizado.module').then( m => m.PagoRealizadoPageModule)
+  },
+  {
+    path: 'historial',
+    loadChildren: () => import('./pages/historial/historial.module').then( m => m.HistorialPageModule)
   },
 
 

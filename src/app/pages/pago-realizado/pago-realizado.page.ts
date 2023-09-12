@@ -2,16 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-detalle-viaje',
-  templateUrl: './detalle-viaje.page.html',
-  styleUrls: ['./detalle-viaje.page.scss'],
+  selector: 'app-pago-realizado',
+  templateUrl: './pago-realizado.page.html',
+  styleUrls: ['./pago-realizado.page.scss'],
 })
-export class DetalleViajePage implements OnInit {
+export class PagoRealizadoPage implements OnInit {
 
   constructor(
-    private router:Router
-
-  ) { }
+    private router:Router) { }
 
   ngOnInit() {
   }
